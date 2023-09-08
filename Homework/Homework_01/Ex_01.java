@@ -5,7 +5,7 @@ public class Ex_01 {
                 int[] array = { 400, 12, 56, 679, 1 };
                 System.out.println(array[7]);
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Ошибка! Вы вышли за пределы массива!");
+                System.out.println("Выход за пределы массива");
             }
         }
 
@@ -16,9 +16,8 @@ public class Ex_01 {
                 int c = a / b;
                 System.out.println(c);
             } catch (ArithmeticException e) {
-                System.out.println("Ошибка! По законам математики на ноль делить нельзя!");
+                System.out.println("Деление на ноль");
             }
-
         }
 
         public static void numberFormatException() {
@@ -27,9 +26,8 @@ public class Ex_01 {
                 int number = Integer.parseInt(string);
                 System.out.println(number);
             } catch (NumberFormatException e) {
-                System.out.println("Ошибка! Невозможно преобразовать в число строку, содержащую в себе символы, отличные от цифр!");
+                System.out.println("Ошибка преобразования строки в число");
             }
-
         }
     }
 
