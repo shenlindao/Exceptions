@@ -56,11 +56,8 @@ public class Main {
     public static void writeFile(String[] data) {
         String fileName = data[0].toLowerCase() + ".txt";
         File file = new File(fileName);
-        try (FileWriter fileWriter = new FileWriter(file, true)) {
-            if (file.length() > 0) {
-                fileWriter.write('\n');
-            }
-            fileWriter.write(String.format("%s %s %s %s %s %s", data[0], data[1],
+        try (FileWriter fileWriter = new FileWriter("Homework\\Homework_03\\data\\" + file, true)) {
+            fileWriter.write(String.format("%s %s %s %s %s %s" + "\n", data[0], data[1],
                     data[2], data[3], data[4], data[5]));
         } catch (IOException e) {
             throw new RuntimeException("Возникла ошибка при работе с файлом");
